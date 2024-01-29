@@ -36,6 +36,36 @@
 					"slug": "tertiary",
 					"color": "#CFCFCF",
 					"name": "Tertiary"
+				},
+				{
+					"slug": "caramel-brown",
+					"color": "#E5D9D1",
+					"name": "Caramel Brown"
+				},
+				{
+					"slug": "chocolate-brown",
+					"color": "#573B28",
+					"name": "Chocolate Brown"
+				},
+				{
+					"slug": "froth-white",
+					"color": "#EEEBE9",
+					"name": "Froth White"
+				},
+				{
+					"slug": "caramel-brown-light",
+					"color": "#E0D9D5",
+					"name": "Chocolate Brown(Light)"
+				},
+				{
+					"slug": "cappuccino-brown",
+					"color": "#BA691C",
+					"name": "Cappuccino Brown"
+				},
+				{
+					"slug": "espresso-black",
+					"color": "#000000",
+					"name": "Espresso Black"
 				}
 			]
 		},
@@ -45,6 +75,11 @@
 				"medium": "clamp(48px, 8vw, 100px)",
 				"large": "clamp(100px, 12vw, 460px)",
 				"outer": "min(4vw, 90px)"
+			},
+			"radius": {
+				"rounded-rectangle": "10px",
+				"rounded-biscuit": "10%",
+				"circle": "50%"
 			}
 		},
 		"typography": {
@@ -52,14 +87,60 @@
 			"fluid": true,
 			"fontFamilies": [
 				{
-					"fontFamily": "-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif",
-					"name": "System Font",
-					"slug": "system-font"
-				},
-				{
-					"fontFamily": "\"Source Serif Pro\", serif",
-					"name": "Source Serif Pro",
-					"slug": "source-serif-pro"
+					"fontFace": [
+						{
+							"fontFamily": "Poppins",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": 700,
+							"src": ["file:./assets/src/font/Poppins/Poppins-Bold.woff2"]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": 600,
+							"src": ["file:./assets/src/font/Poppins/Poppins-SemiBold.woff2"]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": 500,
+							"src": ["file:./assets/src/font/Poppins/Poppins-Medium.woff2"]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": 400,
+							"src": ["file:./assets/src/font/Poppins/Poppins-Regular.woff2"]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": 300,
+							"src": ["file:./assets/src/font/Poppins/Poppins-Light.woff2"]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": 200,
+							"src": ["file:./assets/src/font/Poppins/Poppins-ExtraLight.woff2"]
+						},
+						{
+							"fontFamily": "Poppins",
+							"fontStretch": "normal",
+							"fontStyle": "normal",
+							"fontWeight": 100,
+							"src": ["file:./assets/src/font/Poppins/Poppins-Thin.woff2"]
+						}
+					],
+					"fontFamily": "\"Poppins\", sans-serif",
+					"name": "Poppins",
+					"slug": "poppins"
 				}
 			],
 			"fontSizes": [
@@ -190,8 +271,8 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--background)",
-			"text": "var(--wp--preset--color--foreground)"
+			"background": "var(--wp--preset--color--caramel-brown-light)",
+			"text": "var(--wp--preset--color--chocolate-brown)"
 		},
 		"elements": {
 			"h1": {
@@ -226,11 +307,11 @@
 			},
 			"button": {
 				"border": {
-					"radius": "0"
+					"radius": "var(--wp--custom--radius--rounded-rectangle)"
 				},
 				"color": {
-					"background": "var(--wp--preset--color--primary)",
-					"text": "var(--wp--preset--color--background)"
+					"background": "var(--wp--preset--color--chocolate-brown)",
+					"text": "var(--wp--preset--color--froth-white)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--typography--font-size--normal)",
@@ -238,14 +319,14 @@
 				},
 				":hover": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--background)"
+						"background": "var(--wp--preset--color--cappuccino-brown)",
+						"text": "var(--wp--preset--color--froth-white)"
 					}
 				},
 				":focus": {
 					"color": {
-						"background": "var(--wp--preset--color--secondary)",
-						"text": "var(--wp--preset--color--background)"
+						"background": "var(--wp--preset--color--espresso-black)",
+						"text": "var(--wp--preset--color--froth-white)"
 					}
 				},
 				":active": {
@@ -257,6 +338,24 @@
 				":visited": {
 					"color": {
 						"text": "var(--wp--preset--color--background)"
+					}
+				}
+			},
+			"link": {
+				"typography": {
+					"textDecoration": "none"
+				},
+				"color": {
+					"text": "var(--wp--preset--color--chocolate-brown)"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--cappuccino-brown)"
+					}
+				},
+				":active": {
+					"color": {
+						"text": "var(--wp--preset--color--cappuccino-brown)"
 					}
 				}
 			}
@@ -271,7 +370,7 @@
 			}
 		},
 		"typography": {
-			"fontFamily": "var(--wp--preset--font-family--system-font)",
+			"fontFamily": "var(--wp--preset--font-family--poppins)",
 			"fontSize": "var(--wp--preset--font-size--normal)",
 			"fontWeight": "400",
 			"lineHeight": "1.6"
